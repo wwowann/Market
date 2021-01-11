@@ -1,7 +1,7 @@
 public class ProductFactory{
     public Product getProduct(ProductType type, String nameProduct, int costProduct,
                               Manufactured manufactured, int rating) {
-        Product toReturn = null;
+        Product toReturn;
         switch (type){
             case FOOD_PRODUCTS:
                 toReturn = new FoodProducts(nameProduct, costProduct, manufactured,rating);

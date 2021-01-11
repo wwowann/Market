@@ -1,17 +1,12 @@
-package TrackingOrder;
-
-public abstract class TrackingOrders implements ProductInStock, ApprovalWaitingForDelivery, DeliveryOfRpoductToWareHouse,
-        OrderConfirmation, ShipmentOfProductFromWareHouse, ExecutionOfDocumentsForOder, ResultsOfOrderToCourier,
-        ApprovalOfDeliveryTime, DeliveryOfOrderToBuyer, OrderCompleted, OrderNonCompleted {
+public class TrackingOrders {
     //товар в наличии
-    @Override
-    public boolean productInStock() {
+     public boolean productInStock() {
         System.out.println("Товар имеется в наличии");
         return true;
     }
 
     //согласование ожидания поставки
-    @Override
+
     public boolean approvalWaitingForDelivery() {
         System.out.println("Клиент согласен на ожидание поступления товара с другого склада");
         return true;

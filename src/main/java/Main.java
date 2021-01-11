@@ -1,6 +1,3 @@
-import TrackingOrder.TrackingOrders;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -263,7 +260,7 @@ public class Main {
     }
 
     public static Product findProductsInList(List<Product> list, int value1) {
-        return list.get(value1-1);
+        return list.get(value1 - 1);
 
     }
 
@@ -313,62 +310,7 @@ public class Main {
 
     public static void trackingOrder(Map<Integer, List<Baskets>> buildProductBasket) throws InterruptedException {
         //создается экземпляр класса, который будет отвечать за всю логику трекинга заказа
-        TrackingOrders trackingOrders = new TrackingOrders() {
-            @Override
-            public boolean productInStock() {
-                return super.productInStock();
-            }
-
-            @Override
-            public boolean approvalWaitingForDelivery() {
-                return super.approvalWaitingForDelivery();
-            }
-
-            @Override
-            public boolean deliveryOfProductsToWareHouse() {
-                return super.deliveryOfProductsToWareHouse();
-            }
-
-            @Override
-            public boolean orderConfirmation() {
-                return super.orderConfirmation();
-            }
-
-            @Override
-            public boolean shipmentOfProductFromWareHouse() {
-                return super.shipmentOfProductFromWareHouse();
-            }
-
-            @Override
-            public boolean executionOfDocumentsForOrder() {
-                return super.executionOfDocumentsForOrder();
-            }
-
-            @Override
-            public boolean resultsOfOrderToCourier() {
-                return super.resultsOfOrderToCourier();
-            }
-
-            @Override
-            public boolean approvalOfDeliveryTime() {
-                return super.approvalOfDeliveryTime();
-            }
-
-            @Override
-            public boolean deliveryOfOrderToBuyer() {
-                return super.deliveryOfOrderToBuyer();
-            }
-
-            @Override
-            public boolean orderCompleted() {
-                return super.orderCompleted();
-            }
-
-            @Override
-            public boolean orderNonCompleted() {
-                return super.orderNonCompleted();
-            }
-        };
+        TrackingOrders trackingOrders = new TrackingOrders() {};
         trackingOrders.productInStock();
         TimeUnit.SECONDS.sleep(2);
         trackingOrders.approvalWaitingForDelivery();
@@ -418,10 +360,6 @@ public class Main {
                 .filter(x -> x.getCost() >= (finalAverageCostProduct - 100))
                 .filter(x -> x.getCost() <= (finalAverageCostProduct + 100))
                 .forEach(System.out::println);
-    }
-
-    public static void changeRatingOfProduct(Product product) {
-
     }
 
 }

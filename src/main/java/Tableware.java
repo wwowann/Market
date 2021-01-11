@@ -8,25 +8,25 @@ class Tableware implements Product {
         return goodsProductName;
     }
 
-//    public void setGoodsProductName(String goodsProductName) {
-//        this.goodsProductName = goodsProductName;
-//    }
+    public void setGoodsProductName(String goodsProductName) {
+        this.goodsProductName = goodsProductName;
+    }
 
     public int getCost() {
         return cost;
     }
 
-//    public void setCost(int cost) {
-//        this.cost = cost;
-//    }
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 
     public Manufactured getManufactured() {
         return manufactured;
     }
 
-//    public void setManufactured(Manufactured manufactured) {
-//        this.manufactured = manufactured;
-//    }
+    public void setManufactured(Manufactured manufactured) {
+        this.manufactured = manufactured;
+    }
 
     public double getRating() {
         return rating;

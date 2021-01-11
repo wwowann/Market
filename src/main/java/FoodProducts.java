@@ -1,6 +1,3 @@
-import java.util.Comparator;
-import java.util.Objects;
-
 class FoodProducts implements Product {
     private String goodsProductName;
     private int cost;

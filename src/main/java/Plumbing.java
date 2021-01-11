@@ -32,8 +32,8 @@ class Plumbing implements Product {
         return rating;
     }
 
-       @Override
-    public void  setRating(double rating) {
+    @Override
+    public void setRating(double rating) {
         this.rating = rating;
     }
 
